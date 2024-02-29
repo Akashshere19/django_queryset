@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            td,tr,th{
+                padding:20px;
+                text-align: center;
+                border-bottom: 1px solid #ddd; 
+            }
+            th{
+                background-color:#95a6c2
+            }
+            h3{
+                text-align:center;
+                padding:15px;
+            }    
+            
+            table{
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Here Employees data</h3>
+        {% comment %} <table>
+            <thead>
+            <tr>
+              <th>Employee Name</th>
+              <th>Employee Id</th>
+              <th>Employee Mob No</th>
+              <th>Employee Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in emp_data %}
+            <tr>
+                
+              <td>{{emp.Name}}</td>
+              <td>{{emp.Emp_id}}</td>
+              <td>{{emp.mob_no}}</td>
+              <td>{{emp.Email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>   {% endcomment %}
+        <br>
+        <table>
+            <thead>
+            <tr>
+              <th>Employee Name</th>
+              <th>Joining Date</th>
+              <th>Last Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in emp_data %}
+            <tr>
+                
+              <td>{{emp.Emp_Name}}</td>
+              <td>{{emp.Joining_date}}</td>
+              <td>{{emp.Last_date}}</td>
+              
+            </tr>
+            {% endfor %}
+        </tbody> 
+
+        <script src="" async defer></script>
+    </body>
+</html>
