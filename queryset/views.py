@@ -5,7 +5,7 @@ from .models import *
 # Create your views here.
 
 def index(request):
-    # emp_data = Employee.objects.all()
+    emp_data = Employee.objects.all()
     # print(emp_data)
     # print("SQL Query:",emp_data.query)
 
@@ -39,12 +39,18 @@ def index(request):
     # emp_data = Employee_Details.objects.all()
     # emp_data = Employee_Details.objects.dates('Joining_date','month')
     # emp_data = Employee_Details.objects.values_list('Emp_Name','Joining_date',named=True)
-    emp_data = Employee.objects.filter(Name='Akash',Email='akash@servicenet.in')
-    print(emp_data)
-    em_data = emp_data.union(emp_data)
-    print(em_data)
-    print("SQL Query:",emp_data.query)
+    # emp_data = Employee.objects.filter(Name='Akash',Email='akash@servicenet.in')
 
-    return render(request,'index.html',{'emp_data':emp_data})
+    # emp_data = Employee.objects.first()
+    # emp_data = Employee.objects.order_by('-Name').first()
+    
+    # print(emp_data.exists())
+    # em_data = emp_data.union(emp_data)
+    # emp_data = Employee.objects.filter(Emp_id__lte=12)
+    #emp_data = Employee.objects.filter(Emp_id__gt=12) #greter than and equal to
+    # print(em_data)
+    # print("SQL Query:",emp_data.query)
+
+    return render(request,'index.html',{'employee':emp_data})
 
     

@@ -28,7 +28,7 @@
     </head>
     <body>
         <h3>Here Employees data</h3>
-        {% comment %} <table>
+        <table>
             <thead>
             <tr>
               <th>Employee Name</th>
@@ -38,7 +38,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for emp in emp_data %}
+            {% for emp in employee %}
             <tr>
                 
               <td>{{emp.Name}}</td>
@@ -47,9 +47,9 @@
               <td>{{emp.Email}}</td>
             </tr>
             {% endfor %}
-        </tbody>   {% endcomment %}
+        </tbody>
         <br>
-        <table>
+        {% comment %} <table>
             <thead>
             <tr>
               <th>Employee Name</th>
@@ -67,8 +67,14 @@
               
             </tr>
             {% endfor %}
-        </tbody> 
+        </tbody>  {% endcomment %}
 
         <script src="" async defer></script>
     </body>
 </html>
+
+
+
+
+
+
